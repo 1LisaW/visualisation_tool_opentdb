@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { classNames } from '../../../../utils/classNames';
-import { CategoryWithCount } from '../../../../api/types';
+import type { CategoryWithCount } from '../../../../api/types';
 import { AccordeonItem } from './AccordeonItem';
 import './Accordeon.css';
 

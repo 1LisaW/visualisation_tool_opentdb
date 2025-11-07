@@ -1,6 +1,7 @@
-import { Cell, Pie, PieChart, Sector, SectorProps, Tooltip } from "recharts";
-import { TooltipIndex } from "recharts/types/state/tooltipSlice";
-import { Question } from "../../api/types";
+import { Cell, Pie, PieChart, Sector,  Tooltip } from "recharts";
+import type { SectorProps } from "recharts";
+import type { TooltipIndex } from "recharts/types/state/tooltipSlice";
+import type { Question } from "../../api/types";
 import { classNames } from "../../utils/classNames";
 
 type Coordinate = {

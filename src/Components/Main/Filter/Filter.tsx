@@ -1,4 +1,4 @@
-import { CategoryWithCount } from "../../../api/types";
+import type { CategoryWithCount } from "../../../api/types";
 import "./Filter.css";
 import { Accordeon } from "./Accordeon/Accordeon";
 import { FilterTags } from "./FilterTags";

@@ -1,4 +1,4 @@
-import { Category, CategoryWithCount, Question } from "../api/types";
+import type { Category, CategoryWithCount, Question } from "../api/types";
 
 const getCategoriesWithCount = (categories: Category[], questions: Question[]): CategoryWithCount[] => {
     return categories.map(category => {

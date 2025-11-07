@@ -7,7 +7,7 @@ import {
   API_TOKEN_REQUEST,
 } from "../../assets/constants";
 import { getCategoriesWithCount } from "../../utils/utils";
-import { CategoryWithCount, Question } from "../../api/types";
+import type { CategoryWithCount, Question } from "../../api/types";
 import { Filter } from "./Filter/Filter";
 import { Charts } from "../Charts/Charts";
 import { Button } from "../Button/Button";

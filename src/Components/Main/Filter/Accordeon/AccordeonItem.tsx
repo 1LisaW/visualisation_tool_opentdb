@@ -1,4 +1,4 @@
-import { CategoryWithCount } from '../../../../api/types';
+import type { CategoryWithCount } from '../../../../api/types';
 import { classNames } from '../../../../utils/classNames';
 import './AccordeonItem.css';
 

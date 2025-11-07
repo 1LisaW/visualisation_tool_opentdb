@@ -1,4 +1,4 @@
-import { Question } from "../../api/types";
+import type { Question } from "../../api/types";
 import SimpleBarChart from "./BarChart";
 import CustomActiveShapePieChart from "./CustomActiveShapePieChart";
 import "./Charts.css";

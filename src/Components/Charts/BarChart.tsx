@@ -1,6 +1,6 @@
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { useWindowSize } from "@uidotdev/usehooks";
-import { Question } from '../../api/types';
+import type { Question } from '../../api/types';
 
 interface BarChartProps {
   questions: Question[];
