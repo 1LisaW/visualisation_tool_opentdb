@@ -1,0 +1,10 @@
+.layout-filter {
+    max-width: 320px;
+    border: 1px solid var(--wt-color-border, #ccc);
+    border-radius: 8px;
+    padding: 16px;
+    background-color: var(--wt-color-surface, #fff);
+    box-shadow: var(--wt-shadow-elevation-1, 0 1px 3px rgba(0, 0, 0, 0.1));
+}
+
+

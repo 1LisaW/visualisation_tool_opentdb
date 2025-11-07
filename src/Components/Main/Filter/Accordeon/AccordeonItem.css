@@ -1,0 +1,25 @@
+.accordeon__item{
+    padding-bottom: 1px;
+    width: 100%;
+}
+
+.accordeon__item_label{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.accordeon__item_label:hover{
+    background: #f3f4f6;
+}
+
+.accordeon__item_label_inactive {
+    color: gray;
+    cursor: not-allowed;
+}
+
+.accordeon__item_checkbox{
+    display: block;
+accent-color:#6b57ff;
+}
