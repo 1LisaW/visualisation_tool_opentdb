@@ -1,73 +1,87 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Visualisation Tool (visual_tool)
 
-Currently, two official plugins are available:
+A small React + TypeScript application built with Vite that visualises data (this repository was scaffolded for displaying trivia/visualisations — the project name suggests it uses OpenTDB as sample data). The app includes charts, filter controls, and a simple UI component set.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of contents
 
-## React Compiler
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Getting started](#getting-started)
+- [Available scripts](#available-scripts)
+- [Project structure](#project-structure)
+- [Development notes](#development-notes)
+- [License & contributions](#license--contributions)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Interactive charts (see `src/Components/Charts`)
+- Filtering and tag controls
+- Reusable UI components: Button, Header, Logo, Accordion
+- TypeScript types and simple API layer under `src/api`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React 19 + TypeScript
+- Vite for development and build
+- Recharts for charts
+- ESLint for linting
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Prerequisites
+
+- Node.js 18+ (recommended)
+- npm (or yarn/pnpm)
+
+Install dependencies:
+
+```powershell
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Start the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```powershell
+npm run dev
 ```
+
+Build for production:
+
+```powershell
+npm run build
+```
+
+Preview the built app locally:
+
+```powershell
+npm run preview
+```
+
+Deploy (this project includes a `deploy` script that uses `gh-pages`):
+
+```powershell
+npm run deploy
+```
+
+Notes: `predeploy` runs the build step before publishing.
+
+## Available scripts
+
+The scripts defined in `package.json` are:
+
+- `dev` — start Vite dev server
+- `build` — run TypeScript build and Vite build (produces `dist`)
+- `preview` — locally preview production build
+- `lint` — run ESLint
+- `deploy` — deploy `dist` to GitHub Pages via `gh-pages` (runs `predeploy` first)
+
+## Project structure (important files)
+
+- `index.html` — app entry
+- `src/main.tsx` — app bootstrap
+- `src/App.tsx` — root app component
+- `src/Components` — UI components (Button, Charts, Header, Logo, VisualTool and subcomponents)
+- `src/api` — API types/clients (see `api/types.ts`)
+- `src/assets/constants.ts` — constants used by the app
