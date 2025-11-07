@@ -12,9 +12,9 @@ export const Logo = () => {
           y2="1.81"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9419"></stop>
-          <stop offset="0.43" stop-color="#FF021D"></stop>
-          <stop offset="0.99" stop-color="#E600FF"></stop>
+          <stop stopColor="#FF9419"></stop>
+          <stop offset="0.43" stopColor="#FF021D"></stop>
+          <stop offset="0.99" stopColor="#E600FF"></stop>
         </linearGradient>
       </defs>
       <path

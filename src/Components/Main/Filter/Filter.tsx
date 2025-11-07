@@ -2,6 +2,7 @@ import { CategoryWithCount } from "../../../api/types";
 import "./Filter.css";
 import { Accordeon } from "./Accordeon/Accordeon";
 import { FilterTags } from "./FilterTags";
+import { Button } from "../../Button/Button";
 // import { useState } from "react";
 
 
@@ -22,7 +23,12 @@ export const Filter = (props: FilterProps) => {
     }
     return (
       <aside className="layout-filter">
-        <h3>Filters</h3>
+        <div className="filters-title-group">
+          <h3>Filters</h3>
+          <Button label="Clear All" onClick={() => {
+              setFilteredCategories('');
+          }} />
+          </div>
         <FilterTags tags={filteredCategories} onRemove={onRemove} />
         <Accordeon title="Categories" selectors={categories} onSelectCategorie={setFilteredCategories} />
       </aside>

@@ -1,13 +1,18 @@
 .accordeon__item{
-    padding-bottom: 1px;
     width: 100%;
+}
+.accordeon_trigger{
+    padding-top: 5px;
+
+}
+.accordeon_trigger:hover {
+    background: #f3f4f6;
 }
 
 .accordeon__item_label{
     display: block;
     cursor: pointer;
     width: 100%;
-
 }
 
 .accordeon__item_label:hover{
@@ -21,5 +26,13 @@
 
 .accordeon__item_checkbox{
     display: block;
-accent-color:#6b57ff;
+    accent-color:#6b57ff;
+}
+
+.accordeon__item_checkbox input{
+    margin-right: 8px;
+}
+
+.accordeon__item_count{
+    padding-left: 2px;
 }

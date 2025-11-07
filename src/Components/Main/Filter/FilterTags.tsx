@@ -42,7 +42,6 @@ const FilterTag = (props: FilterTagProps) => {
 
 const FilterTags = (props: { tags: string[], onRemove: (title:string) => void }) => {
   const { tags, onRemove } = props;
-  console.log(props);
   return (
     <div className="filter__tags">
       {tags.map((tagProps, index) => (

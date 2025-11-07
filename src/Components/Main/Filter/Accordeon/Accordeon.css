@@ -13,6 +13,7 @@ ease-out;
 .accordeon__title{
     padding-left: 10px;
     padding-bottom: 10px;
+    cursor: pointer;
 }
 .accordeon_trigger {
     display:flex;
