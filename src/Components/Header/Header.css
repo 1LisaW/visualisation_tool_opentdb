@@ -1,22 +1,22 @@
 .layout-header {
-    box-sizing: border-box;
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 
-.grey-dark-section{
-    background-color: var(--jb-color-grey-active);
+.grey-dark-section {
+  background-color: var(--jb-color-grey-active);
 }
 .wt-container {
-    box-sizing: border-box;
-    max-width: 1670px;
-    padding-left: 22px;
-    padding-right: 22px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  box-sizing: border-box;
+  max-width: 1670px;
+  padding-left: 22px;
+  padding-right: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

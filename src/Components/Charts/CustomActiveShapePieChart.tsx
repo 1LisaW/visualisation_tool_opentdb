@@ -1,4 +1,4 @@
-import { Cell, Pie, PieChart, Sector,  Tooltip } from "recharts";
+import { Cell, Pie, PieChart, Sector, Tooltip } from "recharts";
 import type { SectorProps } from "recharts";
 import type { TooltipIndex } from "recharts/types/state/tooltipSlice";
 import type { Question } from "../../api/types";
@@ -91,7 +91,7 @@ const renderActiveShape = ({
         dy={18}
         textAnchor={textAnchor}
         fill="#999"
-        overflow='hidden'
+        overflow="hidden"
       >
         {`(Rate ${((percent ?? 1) * 100).toFixed(0)}%)`}
       </text>
@@ -128,7 +128,11 @@ export default function CustomActiveShapePieChart({
     difficulty: key,
     value: difficulty[key],
   }));
-  const cells = [<Cell fill="#7aa7ceff" />, <Cell fill="#4d9588ff" />, <Cell fill="#e98187ff" />];
+  const cells = [
+    <Cell fill="#7aa7ceff" />,
+    <Cell fill="#4d9588ff" />,
+    <Cell fill="#e98187ff" />,
+  ];
   return (
     <PieChart
       style={{

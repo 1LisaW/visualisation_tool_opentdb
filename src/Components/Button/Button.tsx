@@ -1,4 +1,4 @@
-import './Button.css';
+import "./Button.css";
 
 interface ButtonProps {
   label: string;
@@ -12,4 +12,4 @@ export const Button = (props: ButtonProps) => {
       {label}
     </button>
   );
-}
+};

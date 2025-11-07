@@ -1,0 +1,24 @@
+.layout-filter {
+  max-width: 320px;
+  min-width: 150px;
+  height: fit-content;
+  border: 1px solid var(--wt-color-border, #ccc);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--wt-color-surface, #fff);
+  box-shadow: var(--wt-shadow-elevation-1, 0 1px 3px rgba(0, 0, 0, 0.1));
+}
+
+.layout-filter h3 {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  margin: 5px 0;
+  color: var(--wt-color-on-surface, #000);
+  padding-right: 20px;
+}
+.filters-title-group {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}

@@ -9,7 +9,7 @@ const getCategoriesWithCount = (categories: Category[], questions: Question[]): 
             checked: false,
         };
     })
-    .sort((a, b) => b.questionCount - a.questionCount);
+        .sort((a, b) => b.questionCount - a.questionCount);
 };
 
 export { getCategoriesWithCount };

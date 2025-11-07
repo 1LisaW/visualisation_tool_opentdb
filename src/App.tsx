@@ -1,14 +1,14 @@
-import { Header } from './Components/Header/Header'
-import {Main} from './Components/Main/Main'
-import './App.css'
+import { Header } from "./Components/Header/Header";
+import { VisualTool } from "./Components/VisualTool/VisualTool";
+import "./App.css";
 
 function App() {
   return (
-    <div className='layout'>
-      <Header/>
-      <Main/>
+    <div className="layout">
+      <Header />
+      <VisualTool />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,6 +1,5 @@
 "use strict";
 import { useEffect, useState } from "react";
-import "./Main.css";
 import {
   API_CATEGORIES,
   API_QUESTIONS,
@@ -11,8 +10,9 @@ import type { CategoryWithCount, Question } from "../../api/types";
 import { Filter } from "./Filter/Filter";
 import { Charts } from "../Charts/Charts";
 import { Button } from "../Button/Button";
+import "./VisualTool.css";
 
-export const Main = () => {
+export const VisualTool = () => {
   const [api_token, setApi_token] = useState("");
   const [categories, setCategories] = useState<CategoryWithCount[]>([]);
   const [data, setData] = useState<Question[]>([]);
@@ -20,12 +20,12 @@ export const Main = () => {
   const [filteredCategories, setFilteredCategories] = useState<string[]>([]);
 
   const onSelectFilteredCategory = (tagName: string) => {
-    if (tagName === '') {
+    if (tagName === "") {
       setFilteredCategories([]);
-      const updatedCategories =
-        categories.map((cat) => ({ ...cat, checked: false }))
-        // .sort((a, b) => a.name.localeCompare(b.name))
-        // .sort((a, b) => b.questionCount - a.questionCount);
+      const updatedCategories = categories.map((cat) => ({
+        ...cat,
+        checked: false,
+      }));
       setCategories(updatedCategories);
       return;
     }
@@ -51,14 +51,12 @@ export const Main = () => {
   };
 
   const uploadData = async (token: string) => {
-    const response = await fetch(API_QUESTIONS + token
-    );
+    const response = await fetch(API_QUESTIONS + token);
     const jsonData = await response.json();
     setData(jsonData?.results || []);
     fetch(API_CATEGORIES)
       .then((response) => response.json())
       .then((categories) => {
-        console.log(categories, " jsonData: ", jsonData);
         const categoriesWithCount = getCategoriesWithCount(
           categories.trivia_categories || [],
           jsonData?.results || []
@@ -66,12 +64,11 @@ export const Main = () => {
         setCategories(categoriesWithCount || []);
         setFilteredCategories([]);
       })
-      .catch((error) => {console.error("Error fetching data:", error)
-      setCategories([]);
-      setFilteredCategories([]);
-
-    }
-    );
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setCategories([]);
+        setFilteredCategories([]);
+      });
   };
 
   useEffect(() => {
@@ -85,33 +82,37 @@ export const Main = () => {
     fetchData().catch((error) => console.error("Error fetching data:", error));
   }, []);
   return (
-    <main >
+    <main>
       <div className="layout-main">
+        <section className="layout-main-description">
+          <h1>Open Trivia Visualizer</h1>
+          <p>
+            This tool allows you to visualize trivia questions from the Open
+            Trivia Database API.
+          </p>
+          <p>
+            You can filter questions by category and see the distribution of
+            questions by category and difficulty.
+          </p>
+        </section>
+        <section className="layout-main-charts-wrapper">
+          <div className="layout-main-controls">
+            <Button
+              label="Load new questions"
+              onClick={() => uploadData(api_token)}
+            />
+            <Filter
+              categories={categories}
+              filteredCategories={filteredCategories}
+              setFilteredCategories={(categorie) =>
+                onSelectFilteredCategory(categorie)
+              }
+            />
+          </div>
 
-    <section className="layout-main-description">
-      <h1>Open Trivia Visualizer</h1>
-      <p>
-        This tool allows you to visualize trivia questions from the Open Trivia Database API.
-      </p>
-      <p>
-        You can filter questions by category and see the distribution of questions by category and difficulty.
-      </p>
-    </section>
-    <section className="layout-main-charts-wrapper">
-        <div className="layout-main-controls">
-        <Button label="Load new questions" onClick={()=>uploadData(api_token)} />
-        <Filter
-          categories={categories}
-          filteredCategories={filteredCategories}
-          setFilteredCategories={(categorie) =>
-            onSelectFilteredCategory(categorie)
-          }
-        />
+          <Charts data={data} filteredCategories={filteredCategories} />
+        </section>
       </div>
-
-      <Charts data={data} filteredCategories={filteredCategories} />
-</section>
-</div>
     </main>
   );
 };

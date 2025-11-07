@@ -1,34 +1,32 @@
-.jb-visual-tool-button{
-    /* min-width: 150px; */
-    background-color: #fff;
-    border: none;
-    color: rgb(10, 1, 1);
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    outline: none;
-    margin-bottom: 10px;
-    height: fit-content;
+.jb-visual-tool-button {
+  /* min-width: 150px; */
+  background-color: #fff;
+  border: none;
+  color: rgb(10, 1, 1);
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 10px;
+  height: fit-content;
 }
 .jb-visual-tool-button:hover {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
 }
 .jb-visual-tool-button:active {
-    background-color: #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transform: translateY(2px);
-    border: 1px solid #ccc;
-
+  background-color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+  border: 1px solid #ccc;
 }
 .jb-visual-tool-button:focus {
-    border: 1px solid #ccc;
-
+  border: 1px solid #ccc;
 }

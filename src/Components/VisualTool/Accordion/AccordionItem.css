@@ -1,0 +1,36 @@
+.accordion__item {
+  width: 100%;
+}
+.accordion_trigger {
+  padding-top: 5px;
+}
+.accordion_trigger:hover {
+  background: #f3f4f6;
+}
+
+.accordion__item_label {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+
+.accordion__item_label:hover {
+  background: #f3f4f6;
+}
+
+.accordion__item_label_inactive {
+  color: gray;
+  cursor: not-allowed;
+}
+.accordion__item_checkbox {
+  display: block;
+  accent-color: #6b57ff;
+}
+
+.accordion__item_checkbox input {
+  margin-right: 8px;
+}
+
+.accordion__item_count {
+  padding-left: 2px;
+}

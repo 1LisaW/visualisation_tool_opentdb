@@ -1,4 +1,4 @@
-import './FilterTags.css';
+import "./FilterTags.css";
 
 interface FilterTagProps {
   title: string;
@@ -40,7 +40,10 @@ const FilterTag = (props: FilterTagProps) => {
   );
 };
 
-const FilterTags = (props: { tags: string[], onRemove: (title:string) => void }) => {
+const FilterTags = (props: {
+  tags: string[];
+  onRemove: (title: string) => void;
+}) => {
   const { tags, onRemove } = props;
   return (
     <div className="filter__tags">
